@@ -2,7 +2,7 @@ import json
 
 
 def new_game():
-    return {'events': {1: (5, 6), 2: (1, 2)}, 'items': [], 'cap': 2, 'count': 0, 'closed': False, 'nodes': {1: True, 2: True}, 'edges': {(1, 2): 5}, 'src': 10, 'dst': 0}
+    return {'events': {1: (5, 6), 2: (1, 2)}, 'items': [], 'cap': 2, 'count': 0, 'closed': False, 'nodes': {1: True, 2: True}, 'edges': {(1, 2): 5}, 'src': 10, 'dst': 0, 'snapshot': 5, 'value': 5, 'log': [], 'settled': False}
 
 def bug_24(state):
     return max(state["events"].items(), key=lambda item: item[1][0])[0]
@@ -35,6 +35,12 @@ def bug_20(state):
     return True
 
 def bug_27(state):
+    return True
+
+def bug_30(state):
+    return True
+
+def bug_31(state):
     return True
 
 def main():
